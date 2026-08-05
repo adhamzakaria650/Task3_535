@@ -13,7 +13,7 @@ namespace Task3
 
         public string PrintDetails()
         {
-            return $"InstID = {InstructorId}\nName = {Name}\nSpecialization = {Specialization}";
+            return $"InstID = {InstructorId} , Name = {Name} , Specialization = {Specialization}";
         }
     }
 }
