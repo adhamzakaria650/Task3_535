@@ -1,0 +1,31 @@
+Class VS Struct VS Record:
+1) Class:
+- Reference type
+- لما بعمل object جديد من class بيتخزن فى ال heap وال variable الى بيشاور عليه بيكون موجود فى ال stack وجواه ال address بتاع ال object الى فى ال heap
+-  لما بقارن بين اتنين objects من نفس الكلاس ب ال (==) فهو بيقارن بين ال addresses بتاعتهم فى ال heap مش ال values الى متخزنه جواهم
+- اقدر اعدل فى البيانات إلى جوا ال objects بسهوله
+- بتدعم ال inheritance
+- اهميته ل ال objects المعقده الى عندها properties و behaviors كتيره
+
+2) Struct:
+- Value Type
+-  ما بيدعمش ال inheritance غير من ال interfaces لكن مش بين ال  structs وبعضها
+- ال objects بتاعته بتتخزن فى ال stack
+- لما بقارن بين اتنين objects من نفس ال struct باستخدام ال (==) بيقارن بين ال values ال متخزنه جاوهم مش ال addresses بتاعتهم عكس ال class
+- بستخدمه لل ال objects البسيطه الى ملهاش properties كتيره زى مثلا struct اسمه point ليه property اسمها x و property اسمها y وبس على كدا او struct اسمها date مثلا فيها property اسمها Year و property اسمها month و property اسمها day وهكذا
+- بيكون immutable يعنى مقدرش اعدل على البيانات بعد أنشأها
+
+3) Record:
+- Reference Type
+- التخزين فى ال heap زى ال class
+- ال declaration بيكون سهل جدا (inline)
+-  بتدعم ال inheritance عادى
+- لما بقارن بين اتنين objects من نفس ال record بيقارن بين ال values زى. ال struct
+- بستخدمها علشان أمثل ال data centric objects او ال data transfer objects دول بشكل مختصر لو انا عندى class اسمه user فى properties  و behaviors كتيره خاصه بال user ولكن عندى عدد قليل من ال properties الى ببعتهم ك APIs فى السيستم بتاعى فا بعمل record بال properties الى محتاجها دى بس مش محتاج ابعت كل البيانات ودا هيكون امان
+- بتكون immutable يعنى مبتسمحش بتعديل البيانات داخل السيستم
+
+==========================================================================================================
+
+What is the Indexer:
+ال indexer هى طريقه بتخلينى اتعامل مع ال objects الى موجوده عندى ك array أو dictionary يعنى بدل ما اكتب اسم ال object. ال property 
+لا هعمل اسم ال object[index\key] الكلام دا بيتم عن طريق انى بستبدل اسم ال property ب this[key] جوا الكلاس
